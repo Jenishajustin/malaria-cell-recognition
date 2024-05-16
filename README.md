@@ -1,30 +1,38 @@
-# Deep Neural Network for Malaria Infected Cell Recognition
+# EXP-04 Deep Neural Network for Malaria Infected Cell Recognition
 
 ## AIM
 
 To develop a deep neural network for Malaria infected cell recognition and to analyze the performance.
 
 ## Problem Statement and Dataset
+To develop a deep neural network to accurately identify malaria-infected cells in microscopic blood images. This automated system should achieve high performance in diagnosis, improve treatment decisions, and potentially be deployed in resource-limited settings.Your task would be to optimize the model, possibly by tuning hyperparameters, trying different architectures, or using techniques like transfer learning to improve classification accuracy.
+<br>
+<img src="https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/57a7bb06-410e-49c7-8d26-ffcd4d3bf00c" height=250 width=300>
 
 ## Neural Network Model
+![Screenshot 2024-05-16 175534](https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/4fd6c95f-3080-41d6-a736-cd91d3b08563)
 
-Include the neural network model diagram.
+
 
 ## DESIGN STEPS
 
-### STEP 1:
+1. We begin by importing the necessary Python libraries, including TensorFlow for deep learning, data preprocessing tools, and visualization libraries.
+2. To leverage the power of GPU acceleration, we configure TensorFlow to allow GPU processing, which can significantly speed up model training.
+3. We load the dataset, consisting of cell images, and check their dimensions. Understanding the image dimensions is crucial for setting up the neural network architecture.
+4. We create an image generator that performs data augmentation, including rotation, shifting, rescaling, and flipping. Data augmentation enhances the model's ability to generalize and recognize malaria-infected cells in various orientations and conditions.
+5. We design a convolutional neural network (CNN) architecture consisting of convolutional layers, max-pooling layers, and fully connected layers. The model is compiled with appropriate loss and optimization functions.
+6. We split the dataset into training and testing sets, and then train the CNN model using the training data. The model learns to differentiate between parasitized and uninfected cells during this phase.
+7. We visualize the training and validation loss to monitor the model's learning progress and detect potential overfitting or underfitting.
+8. We evaluate the trained model's performance using the testing data, generating a classification report and confusion matrix to assess accuracy and potential misclassifications.
+9. We demonstrate the model's practical use by randomly selecting and testing a new cell image for classification.
 
-### STEP 2:
 
-### STEP 3:
-
-Write your own steps
 
 ## PROGRAM
 
-### Name:
+### Name: J.JENISHA
 
-### Register Number:
+### Register Number: 212222230056
 ```python
 import os
 import pandas as pd
@@ -135,19 +143,20 @@ confusion_matrix(test_image_gen.classes,predictions)
 ## OUTPUT
 
 ### Training Loss, Validation Loss Vs Iteration Plot
+<img src="https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/2163fb6d-6cf8-4a26-ba7d-63b923a231e1" height=400 width=500>
 
-Include your plot here
 
 ### Classification Report
+<img src="https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/b4bff1f7-af28-420c-9363-f7dedc890bd7" height=200 width=300>
 
-Include Classification Report here
 
 ### Confusion Matrix
+<img src="https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/6da30630-82df-46e5-9657-3658e4f71c81">
 
-Include confusion matrix here
 
 ### New Sample Data Prediction
+<img src="https://github.com/Jenishajustin/malaria-cell-recognition/assets/119405070/27ceaad5-ae38-41cd-bfdd-d9378f961f77" height=400 width=400>
 
-Include your sample cell image input and output of your model.
 
 ## RESULT
+Thus, a deep neural network for Malaria infected cell recognition is developed and the performance is analyzed.
